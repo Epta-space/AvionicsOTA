@@ -47,8 +47,8 @@ Siga os passos abaixo para compilar, enviar o firmware e testar a funcionalidade
 1.  **Clone o repositório:**
 
     ```bash
-    git clone <URL_DO_SEU_REPOSITÓRIO>
-    cd EPTA_OTA
+    git clone git@github.com:Epta-space/AvionicsOTA.git
+    cd AvionicsOTA
     ```
 
 2.  **Configure suas credenciais de rede:**
