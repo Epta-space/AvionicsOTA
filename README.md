@@ -120,6 +120,19 @@ Contribuições são o que tornam a comunidade de código aberto um lugar incrí
 4.  Faça o *Push* para a Branch (`git push origin feature/AmazingFeature`)
 5.  Abra um *Pull Request*
 
+## 📦 Observações
+Pra que tudo funcione devidamente no seu sistema, possivelmente você terá  que liberar as portas que o OTA usa para visualização de logs e deploy do código no seu computador. Para isso, use os seguintes comandos:
+
+    sudo ufw allow 3232/tcp
+    sudo ufw allow 3232/udp
+    sudo ufw allow 5353/udp
+    sudo ufw allow from 192.168.1.0/24
+    sudo ufw default allow outgoing
+
+Por último, rode esse comando: (Troque wlan0 pelo nome real da sua interface, use `ip link` pra ver)
+
+    sudo ufw allow in on wlan0 from 192.168.1.0/24 to any state RELATED,ESTABLISHED
+
 ## 📜 Licença
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
